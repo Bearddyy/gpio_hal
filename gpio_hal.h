@@ -17,15 +17,18 @@ extern "C" {
 #ifndef ALTERNATIVE_DEFINES
 typedef enum gpio_input_pins_t
 {
-    GPIO_PIN_0,
-    GPIO_PIN_1,
+    GPIO_INPUT_PIN_0,
+    GPIO_INPUT_PIN_1,
+#ifdef ALTERNATIVE_HARDWARE // An example of how hardware varients can be handled
+    GPIO_INPUT_PIN_4,
+#endif
     GPIO_INPUT_PIN_COUNT
 } gpio_input_pins_t;
 
 typedef enum gpio_output_pins_t
 {
-    GPIO_PIN_2,
-    GPIO_PIN_3,
+    GPIO_OUTPUT_PIN_2,
+    GPIO_OUTPUT_PIN_3,
     GPIO_OUTPUT_PIN_COUNT
 } gpio_output_pins_t;
 

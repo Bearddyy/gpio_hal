@@ -19,13 +19,16 @@ typedef struct hardware_specific_define_t
 // Dedicated initializers allow for easy mapping of the public gpio_hal_pin_t to the hardware specific pin
 // It also enforce the correct number of pins are defined and is checked at compile time
 static const hardware_specific_define_t input_hardware_mapping[GPIO_INPUT_PIN_COUNT] = {
-    [GPIO_PIN_0] = { .pin = 0, .port = 0 },
-    [GPIO_PIN_1] = { .pin = 1, .port = 0 },
+    [GPIO_INPUT_PIN_0] = { .pin = 0, .port = 0 },
+    [GPIO_INPUT_PIN_1] = { .pin = 1, .port = 0 },
+#ifdef ALTERNATIVE_HARDWARE // An example of how hardware varients can be handled
+    [GPIO_INPUT_PIN_4] = { .pin = 2, .port = 0 },
+#endif
 };
 
 static const hardware_specific_define_t output_hardware_mapping[GPIO_OUTPUT_PIN_COUNT] = {
-    [GPIO_PIN_0] = { .pin = 0, .port = 0 },
-    [GPIO_PIN_1] = { .pin = 1, .port = 0 },
+    [GPIO_OUTPUT_PIN_2] = { .pin = 0, .port = 0 },
+    [GPIO_OUTPUT_PIN_3] = { .pin = 1, .port = 0 },
 };
 
 // GPIO HAL functions
