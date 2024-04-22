@@ -1,4 +1,4 @@
-# Template GPIO Hardware Abstraction Laye
+# Template GPIO Hardware Abstraction Layer
 
 This is a template for a GPIO Hardware Abstraction Layer (HAL) for embedded C projects. It is intended to be used as a starting point for your own HAL. The main purpose of this template is to provide a starting point for your own HAL and to demonstrate how to structure your HAL. It is not intended to be a fully functional HAL.
 
